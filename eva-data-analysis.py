@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
 import pandas as pd
-
+'''
+This is a multi-line comment
+'''
 def read_json_to_dataframe(input_file):
     print(f'Reading JSON file {input_file}')
     # Read the data from a JSON file into a Pandas dataframe
@@ -9,7 +11,6 @@ def read_json_to_dataframe(input_file):
     # Clean the data by removing any rows where duration is missing
     eva_df.dropna(axis=0, subset=['duration', 'date'], inplace=True)
     return eva_df
-
 
 def write_dataframe_to_csv(df, output_file):
     print(f'Saving to CSV file {output_file}')
